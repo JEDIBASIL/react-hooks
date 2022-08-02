@@ -39,13 +39,12 @@ function App() {
       })
     }
     const completeTodos =(id)=>{
+      setTodosId(todosId+1);
       todosList.map((todos)=>{
         if(todos.id === id){
-          console.log('found');
           todos= {id:todos.id,name:todos.name,status:todos.status = !todos.status}
-        }
+        };
       })
-      console.log(todosList);
     }
 
     useLayoutEffect(()=>{
